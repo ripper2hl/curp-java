@@ -7,11 +7,11 @@ import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import org.junit.Assert;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class CurpTest {
     
-    private Persona persona = new Persona();
+    private final Persona persona = new Persona();
     
     @Cuando("El nombre es {string}")
     public void el_nombre_es(String string) {
@@ -33,7 +33,12 @@ public class CurpTest {
     }
     @Cuando("su fecha de nacimiento es el {string}")
     public void su_fecha_de_nacimiento_es_el(String string) {
-        persona.setFechaNacimiento(new Date());
+        String[] fechaArreglo = string.split("-");
+        persona.setFechaNacimiento(
+                LocalDate.of(        Integer.parseInt(fechaArreglo[2]),
+                        Integer.parseInt(fechaArreglo[1]),
+                        Integer.parseInt(fechaArreglo[0]))
+        );
     }
     @Cuando("nacio en el estado de {string}")
     public void nacio_en_el_estado_de(String string) {

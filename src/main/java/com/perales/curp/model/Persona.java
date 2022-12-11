@@ -1,7 +1,8 @@
 package com.perales.curp.model;
+
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 public class Persona {
@@ -9,6 +10,6 @@ public class Persona {
     private String apellidoPaterno;
     private String apellidoMaterno;
     private Genero genero;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private Estado estado;
 }
