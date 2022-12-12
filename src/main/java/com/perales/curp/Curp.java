@@ -1,10 +1,7 @@
 package com.perales.curp;
 
-import com.perales.curp.model.Estado;
-import com.perales.curp.model.Genero;
 import com.perales.curp.model.Persona;
 
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
