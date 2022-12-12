@@ -38,7 +38,7 @@
         <repository>
             <id>github</id>
             <name>GitHub ripper2hl Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/ripper2hl/java-curp</url>
+            <url>https://maven.pkg.github.com/ripper2hl/curp-java</url>
         </repository>
     </distributionManagement>
 </project>
