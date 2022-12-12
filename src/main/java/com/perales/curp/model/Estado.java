@@ -1,5 +1,7 @@
 package com.perales.curp.model;
 
+import lombok.Getter;
+
 public enum Estado {
     AGUASCALIENTES("AS"),
     BAJA_CALIFORNIA("BC"),
@@ -17,6 +19,7 @@ public enum Estado {
     HIDALGO("HG"),
     JALISCO("JC"),
     ESTADO_DE_MEXICO("MC"),
+    NO_ESPECIFICADO( "NE"),
     MICHOACAN("MN"),
     MORELOS("MS"),
     NAYARIT("NT"),
@@ -34,14 +37,11 @@ public enum Estado {
     VERACRUZ("VZ"),
     YUCATAN("YN"),
     ZACATECAS("ZS");
-    
-    private String value;
+
+    @Getter
+    private final String value;
     
     Estado(String value) {
         this.value = value;
-    }
-    
-    public String getValue() {
-        return value;
     }
 }
